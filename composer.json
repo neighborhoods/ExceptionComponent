@@ -1,0 +1,26 @@
+{
+  "name": "neighborhoods/exception-component",
+  "description": "Provides a consistent transient and non-transient exception types.",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Brad Wilson",
+      "email": "brad@neighborhoods.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "Neighborhoods\\ExceptionComponent\\": [
+        "src",
+        "fab"
+      ]
+    }
+  }
+}
