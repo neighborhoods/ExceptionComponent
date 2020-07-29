@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ExceptionComponent;
+namespace Neighborhoods\ExceptionComponent;
 
 use Exception as PHPException;
 use Throwable;

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace ExceptionComponent;
+namespace Neighborhoods\ExceptionComponent;
 
 interface NonTransientExceptionInterface extends ExceptionInterface
 {
