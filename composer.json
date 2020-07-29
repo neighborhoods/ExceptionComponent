@@ -1,6 +1,6 @@
 {
   "name": "neighborhoods/exception-component",
-  "description": "Provides a consistent transient and non-transient exception types.",
+  "description": "Provides consistent transient and non-transient exception types.",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
