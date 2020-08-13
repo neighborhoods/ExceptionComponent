@@ -20,7 +20,7 @@ NEEDS TO BE FIXED
             } else { 
               throw (new NonTransientException())->setPrevious($pdoException);
             }
-        } catch (\Doctrine\DBAL\ConnectionException $conectionExeption) {
+        } catch (\Doctrine\DBAL\DBALException $conectionExeption) {
             throw (new TransientException())->setPrevious($pdoException);
         }
     }
@@ -29,7 +29,7 @@ NEEDS TO BE FIXED
     {
         try{
             $getConnection()->rollBack();
-        } catch (\Doctrine\DBAL\ConnectionException $connectionException) {
+        } catch (\Doctrine\DBAL\DBALException $connectionException) {
             throw (new TransientException())->setPrevious($pdoException);
         }    
         return $this;
