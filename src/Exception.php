@@ -49,7 +49,7 @@ class Exception extends PHPException implements ExceptionInterface
 
         $messages[] = $message;
         /** @noinspection JsonEncodingApiUsageInspection */
-        $this->message = json_encode($messages, true);
+        $this->message = json_encode($messages);
 
         return $this;
     }
