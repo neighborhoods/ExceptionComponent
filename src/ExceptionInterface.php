@@ -12,7 +12,7 @@ interface ExceptionInterface extends Throwable, JsonSerializable
 
     public function setPrevious(Throwable $previous): ExceptionInterface;
 
-    public function jsonSerialize(): string;
+    public function jsonSerialize();
 
     public function addMessage(string $message): ExceptionInterface;
 }
