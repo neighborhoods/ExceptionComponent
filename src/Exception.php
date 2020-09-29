@@ -8,7 +8,7 @@ use Throwable;
 
 class Exception extends PHPException implements ExceptionInterface
 {
-    private $message = [];
+    private $messages = [];
 
     public function __construct()
     {
@@ -17,10 +17,10 @@ class Exception extends PHPException implements ExceptionInterface
 
     public function setPrevious(Throwable $previous): ExceptionInterface
     {
-        $messages = $this->message;
+        $messages = $this->messages;
         $code = $this->code;
         parent::__construct('', 0, $previous);
-        $this->message = $messages;
+        $this->messages = $messages;
         $this->code = $code;
 
         return $this;
@@ -33,14 +33,14 @@ class Exception extends PHPException implements ExceptionInterface
         return $this;
     }
 
-    private function getMessages(): array
+    public function getMessages(): array
     {
-        return $this->message;
+        return $this->messages;
     }
 
     public function addMessage(string $message): ExceptionInterface
     {
-        $this->message[] = $message;
+        $this->messages[] = $message;
 
         return $this;
     }
