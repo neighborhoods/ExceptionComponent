@@ -15,4 +15,6 @@ interface ExceptionInterface extends Throwable, JsonSerializable
     public function jsonSerialize();
 
     public function addMessage(string $message): ExceptionInterface;
+
+    public function getMessages(): array;
 }
